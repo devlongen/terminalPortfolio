@@ -1,4 +1,10 @@
-.cabecalho{
-    background-color: aqua;
-    font-style: oblique;
-};
+body {
+    background-color: #4c06a1;
+}
+
+.texto_introdutorio {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
