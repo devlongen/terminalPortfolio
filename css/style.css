@@ -3,37 +3,39 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
+/*Cabeçalho do Portfólio*/
 .cabecalho{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*Animação de letra (tentar fazer estilo cmd)*/
 .animacao_portfolio {
     font-size: 24px;
-    overflow: hidden; /* Oculta o texto que vai aparecendo */
-    border-right: .15em solid rgb(0, 0, 0); /* Borda como se fosse a linha de digitação */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-    margin: 0 auto; /* Centraliza o texto */
-    letter-spacing: .35em; /* Espaçamento entre as letras */
-    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite; /* Define a animação */
-  }
+    overflow: hidden;
+    border-right: .15em solid rgb(0, 0, 0); 
+    white-space: nowrap;
+    margin: 0 auto; 
+    letter-spacing: .35em; 
+    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
+}
   
-  /* Animação de digitação */
-  @keyframes typing {
+/* Animação de digitação */
+@keyframes typing {
     from { width: 0 }
     to { width: 20% }
-  }
+}
   
-  /* Animação de piscar do cursor */
-  @keyframes blink-caret {
+/* Animação de piscar do cursor */
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(255, 255, 255) }
-  }
-  
+}
+/*Paragráfos sobre mim*/
 .texto_introdutorio{
     font-size: medium;
 }
-
+/*Destacamento das tecnológias*/
 .highlight {
     color: #29ff04;
 }
