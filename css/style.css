@@ -1,10 +1,39 @@
 body {
-    background-color: #4c06a1;
+    background-color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animacao_portfolio {
+    font-size: 24px;
+    overflow: hidden; /* Oculta o texto que vai aparecendo */
+    border-right: .15em solid rgb(0, 0, 0); /* Borda como se fosse a linha de digitação */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    margin: 0 auto; /* Centraliza o texto */
+    letter-spacing: .35em; /* Espaçamento entre as letras */
+    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite; /* Define a animação */
+  }
+  
+  /* Animação de digitação */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 20% }
+  }
+  
+  /* Animação de piscar do cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255) }
+  }
+  
+.texto_introdutorio{
+    font-size: medium;
 }
 
-.texto_introdutorio {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    text-align: center;
-    color: white;
+.highlight {
+    color: #29ff04;
 }
