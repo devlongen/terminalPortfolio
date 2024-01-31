@@ -39,3 +39,8 @@ body {
 .highlight {
     color: #29ff04;
 }
+/*Imagem do wpp */
+.image_wpp{
+    width: 5px;
+    height: 5px;
+}
