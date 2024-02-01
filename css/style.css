@@ -9,31 +9,24 @@ body {
     justify-content: center;
     align-items: center;
 }
-/*Animação de letra (tentar fazer estilo cmd)*/
-.animacao_portfolio {
-    font-size: 24px;
-    overflow: hidden;
-    border-right: .15em solid rgb(0, 0, 0); 
-    white-space: nowrap;
-    margin: 0 auto; 
-    letter-spacing: .35em; 
-    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
-}
-  
-/* Animação de digitação */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 20% }
-}
-  
-/* Animação de piscar do cursor */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(255, 255, 255) }
-}
 /*Paragráfos sobre mim*/
-.texto_introdutorio{
-    font-size: medium;
+.terminal {
+    border: 1px solid white;
+    padding: 10px;
+
+}
+.cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1.2em;
+    background-color: white;
+    animation: blink 1s infinite step-end;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 /*Destacamento das tecnológias*/
 .highlight {
@@ -41,6 +34,6 @@ body {
 }
 /*Imagem do wpp */
 .image_wpp{
-    width: 5px;
-    height: 5px;
+    width: 13.5px;
+    height: 13.5px;
 }
