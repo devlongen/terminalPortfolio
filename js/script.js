@@ -49,7 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iniciar a animação quando a página for carregada
     escreverTexto(texto2, 0, 490);
 });
-function resizeInput(input) {
-    const texto_cmd = document.getElementById('texto_cmd');
-    texto_cmd.style.width = (input.value.length * 10) + 'px'; // Ajusta a largura com base no tamanho do texto digitado
-}
+const inputField = document.getElementById('input_text_cmd');
+
+input_text_cmd.addEventListener('input', function() {
+    const textSize = this.value.length;
+    const minWidth = 2;
+    const currentWidth = textSize * 8;
+    const newWidth = Math.max(minWidth, currentWidth);
+    
+    this.style.width = newWidth + 'px';
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const input_text_cmd = document.getElementById('input_text_cmd');
+    
+    // Define o foco no campo de entrada
+    input_text_cmd.focus();
+});

@@ -37,11 +37,13 @@ body {
     width: 13.5px;
     height: 13.5px;
 }
-.texto_cmd {
+.texto_cmd{
+    width: 0px;
+}
+.input_text_cmd {
     border: none;
     outline: none;
     background-color: transparent;
     color: white;
     caret-color: transparent;
-    width: 5px;
 }
