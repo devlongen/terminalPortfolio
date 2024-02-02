@@ -17,7 +17,7 @@ body {
 }
 .cursor {
     display: inline-block;
-    width: 0.7em;
+    width: 0.6em;
     height: 0.3em;
     background-color: white;
     animation: blink 1s infinite step-end;
@@ -36,4 +36,12 @@ body {
 .image_wpp{
     width: 13.5px;
     height: 13.5px;
+}
+.texto_cmd {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    caret-color: transparent;
+    width: 5px;
 }

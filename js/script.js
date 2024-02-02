@@ -49,5 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iniciar a animação quando a página for carregada
     escreverTexto(texto2, 0, 490);
 });
-
-
+function resizeInput(input) {
+    const texto_cmd = document.getElementById('texto_cmd');
+    texto_cmd.style.width = (input.value.length * 10) + 'px'; // Ajusta a largura com base no tamanho do texto digitado
+}
