@@ -12,13 +12,13 @@ body {
 /*Paragráfos sobre mim*/
 .terminal {
     border: 1px solid white;
-    padding: 10px;
+    padding: 7.5px;
 
 }
 .cursor {
     display: inline-block;
-    width: 0.5em;
-    height: 1.2em;
+    width: 0.7em;
+    height: 0.3em;
     background-color: white;
     animation: blink 1s infinite step-end;
 }
