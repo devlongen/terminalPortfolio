@@ -47,7 +47,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Iniciar a animação quando a página for carregada
-    escreverTexto(texto2, 0, 490);
+    escreverTexto(texto2, 0, 150);
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const texto3 = "Digite .help para ter acesso as linhas de comando.";
+    const textoElemento = document.getElementById('texto3');
+
+    function escreverTexto(texto, index, intervalo) {
+        if (index < texto3.length) {
+            textoElemento.innerHTML += texto.charAt(index);
+            index++;
+            setTimeout(function () {
+                escreverTexto(texto3, index, intervalo);
+            }, intervalo);
+        }
+    }
+
+    // Iniciar a animação quando a página for carregada
+    escreverTexto(texto3, 0, 200);
 });
 const inputField = document.getElementById('input_text_cmd');
 
