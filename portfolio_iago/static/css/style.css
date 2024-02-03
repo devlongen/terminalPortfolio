@@ -33,15 +33,14 @@ body {
     width: 13.5px;
     height: 13.5px;
 }
-.texto_cmd{
-    width: 5px;
-}
-input.style_input{
+.codigo_input {
     font-family: 'Courier New', Courier, monospace;
     border: none;
     outline: none;
     background-color: transparent;
     color: rgb(255, 255, 255);
     caret-color: transparent;
-    width: 5px;
+    width: 13px; /* Define a largura inicial do input */
+    min-width: 10px; 
 }
+

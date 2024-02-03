@@ -67,13 +67,24 @@ document.addEventListener('DOMContentLoaded', function () {
     escreverTexto(texto3, 0, 200);
 });
 document.addEventListener('DOMContentLoaded', function() {
+    const inputField = document.querySelector('.codigo_input');
+
+    inputField.addEventListener('input', function() {
+        const textSize = this.value.length;
+        const minWidth = 2;
+        const currentWidth = textSize * 8;
+        const newWidth = Math.max(minWidth, currentWidth);
+        this.style.width = newWidth + 'px';
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('texto_cmd');
-    const input_text_cmd = document.getElementById('input_text_cmd');
+    const style_input = document.getElementById('input_text_cmd');
     
-    input_text_cmd.focus();
+    style_input.focus();
 
     // Adiciona um ouvinte de evento para o evento 'keypress'
-    input_text_cmd.addEventListener('keypress', function(event) {
+    style_input.addEventListener('keypress', function(event) {
         // Verifica se a tecla pressionada foi 'Enter' (código de tecla 13)
         if (event.key === 13) {
             // Impede o envio padrão do formulário

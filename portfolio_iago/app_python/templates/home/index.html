@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio IAGO</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="/icon/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'icon/favicon-32x32.png' %}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -26,9 +26,13 @@
             <p id="texto2"></p>
             <p id="texto3"></p>
             <div>
-                <input type="text" name="texto_codigo" id="codigo_input" class="style_input">
+                <form method="post" id="texto_cmd">
+                <span>C:\Users\Visitante></span>
+                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input">
                 <span class="cursor"></span>
+                </form>
             </div>
+            <p></p>
             Contatos: 
             <img src="https://cdn-icons-png.flaticon.com/256/174/174879.png" alt="" class="image_wpp">(47) 9 8807-1571
         </div>
