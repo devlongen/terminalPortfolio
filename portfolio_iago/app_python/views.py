@@ -27,6 +27,8 @@ def help_python(request):
         return redirect('https://www.linkedin.com/in/iagolongen/')
     elif tratativa_dados == '.wpp':
         return redirect('https://wa.me/5547988071571')
+    elif tratativa_dados == '.github':
+        return redirect('https://github.com/devlongen')
     else:
         return render(request,'home/index.html')
     
