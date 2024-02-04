@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     escreverTexto(texto, 0, 25);
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const texto2 = "Tecnologias: Python, Node-RED, MySQL.";
+    const texto2 = "Tecnologias: Python, Django , Node-RED, MySQL.";
     const textoElemento = document.getElementById('texto2');
 
     function escreverTexto(texto, index, intervalo) {
