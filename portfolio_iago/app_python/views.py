@@ -1,16 +1,33 @@
 
 from django.shortcuts import render
 from django.shortcuts import redirect
+from plyer import notification
 
+# conexoes com diretorios
 def portfolio(request):
     return render(request,'home/index.html')
+def jogo_da_velha(request):
+    return render(request,'python/jogo_da_velha.html')
+def calculadora_imc(request):
+    return render(request,'python/calculadora_imc.html')
+def jogo_de_advinhar(request):
+    return render(request,'python/jogo_de_advinhar.html')
+
+# transacao de diretorios
 def help_python(request):
     tratativa_dados = request.POST.get('texto_codigo') 
     if tratativa_dados == '.help':
         return render(request, 'python/help_python.html')
+    elif tratativa_dados == '.cd jogo_da_velha':
+        return render(request,'python/jogo_da_velha.html')
+    elif tratativa_dados == '.cd calculadora_imc':
+        return render(request,'python/calculadora_imc.html')
+    elif tratativa_dados == '.cd jogo_de_advinhar':
+        return render(request,'python/jogo_de_advinhar.html')
     elif tratativa_dados == '.linkedin':
         return redirect('https://www.linkedin.com/in/iagolongen/')
     elif tratativa_dados == '.wpp':
         return redirect('https://wa.me/5547988071571')
     else:
         return render(request,'home/index.html')
+    
