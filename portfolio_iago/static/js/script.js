@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             // Executa a ação desejada, por exemplo, envia o formulário
             form.submit();
+            resposta_user = form 
         }
     });
 });
