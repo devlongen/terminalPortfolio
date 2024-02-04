@@ -1,7 +1,6 @@
 
 from django.shortcuts import render
 from django.shortcuts import redirect
-from plyer import notification
 
 # conexoes com diretorios
 def portfolio(request):
@@ -30,4 +29,6 @@ def help_python(request):
         return redirect('https://wa.me/5547988071571')
     else:
         return render(request,'home/index.html')
+    
+
     
