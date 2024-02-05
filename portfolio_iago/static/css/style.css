@@ -33,7 +33,7 @@ body {
     width: 13.5px;
     height: 13.5px;
 }
-.codigo_input {
+.codigo_input{
     font-family: 'Courier New', Courier, monospace;
     border: none;
     outline: none;
@@ -43,4 +43,5 @@ body {
     width: 13px; /* Define a largura inicial do input */
     min-width: 10px; 
 }
+
 

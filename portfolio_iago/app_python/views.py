@@ -32,5 +32,10 @@ def help_python(request):
     else:
         return render(request,'home/index.html')
     
+def calculadora_imc(request):
+    dados_input = request.POST.get('input_python')
+    #integrar com lista
+    #class pessoa(nome,idade,peso,altura) depois calcular
+    
 
     
