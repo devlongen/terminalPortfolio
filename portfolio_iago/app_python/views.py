@@ -31,11 +31,3 @@ def help_python(request):
         return redirect('https://github.com/devlongen')
     else:
         return render(request,'home/index.html')
-    
-def calculadora_imc(request):
-    dados_input = request.POST.get('input_python')
-    #integrar com lista
-    #class pessoa(nome,idade,peso,altura) depois calcular
-    
-
-    

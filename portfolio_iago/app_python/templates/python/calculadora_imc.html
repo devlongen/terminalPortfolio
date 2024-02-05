@@ -24,10 +24,13 @@
             <div>
             <form method="post" id="input_python">    
             {% csrf_token %}
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
+            <span>C:\Users\Visitante></span>
+            <form action="{% url 'calculadora_imc' %}" method="post">                
+                <input type="text" name="name_user" id="name_user">
+                <input type="number" name="idade_user" id="idade_user">
+                <input type="number" name="peso_user" id="peso_user">
+                <input type="number" name="altura_user" id="altura_user">
+                <input type="submit" value="enviar">
             </div>
             <p></p>
             Contatos: 

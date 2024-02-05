@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const portfolio = "PORTOFÓLIO DE IAGO";
+    const portfolio = "PORTFÓLIO DE IAGO";
     const textoElemento = document.getElementById('portfolio');
 
     function escreverTexto(texto, index, intervalo) {
