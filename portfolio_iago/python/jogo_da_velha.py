@@ -8,6 +8,7 @@
 
 """
 # tabuleiro trabalhado com matrizes
+"""
 tabuleiro = [0,0,0]
 while True:
     print("Sejam bem-vindo ao jogo da velha PYTHON!")
@@ -55,3 +56,4 @@ while True:
         case 3:
                 print("Obrigado por ter entrado no jogo!")
                 break
+"""

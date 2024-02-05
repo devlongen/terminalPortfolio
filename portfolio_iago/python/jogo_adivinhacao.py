@@ -1,5 +1,6 @@
 import random
 #biblioteca de randomizar numero
+"""
 loop_adivinha = True
 # código do jogo de adivinhação
 while loop_adivinha:
@@ -67,3 +68,4 @@ while loop_adivinha:
             else:
                 print("Você digitou algo inválido ou que não condiz com a pergunta, tente novamente!")
 # perguntando para o usuário caso deseja tentar novamente
+"""

@@ -1,6 +1,6 @@
 def calculo_imc(peso_usuario, altura_usuario):
-    #calculando e arredondando o IMC.
     return  peso_usuario / (altura_usuario * altura_usuario)   
+"""
 loop_calculadora = True
 while loop_calculadora:
     while True:
@@ -63,3 +63,4 @@ while loop_calculadora:
     else:
         print("Seja bem-vindo de volta!")
     #Retorno de loop_calculadora caso ao contrário irá finalizar o programa
+"""
