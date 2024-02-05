@@ -31,3 +31,17 @@ def help_python(request):
         return redirect('https://github.com/devlongen')
     else:
         return render(request,'home/index.html')
+
+"""    
+import requests
+from js_diferente import diferente
+url = "https://body-mass-index-bmi-calculator.p.rapidapi.com/metric"
+querystring = {pesoUsuario,alturaUsuario}
+
+headers = {
+	"X-RapidAPI-Key": "f5d22b74a5msh72e7f64685d971cp1c73d5jsn48e98adb797f",
+	"X-RapidAPI-Host": "body-mass-index-bmi-calculator.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers, params=querystring)
+"""

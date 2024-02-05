@@ -22,15 +22,15 @@
             <p>Portfolio Version [0.1]</p>
             <p>(c) IAGO LONGEN Todos os direitos reservados.</p>
             <div>
-            <form method="post" id="input_python">    
             {% csrf_token %}
             <span>C:\Users\Visitante></span>
-            <form action="{% url 'calculadora_imc' %}" method="post">                
+            <form method="post">                
                 <input type="text" name="name_user" id="name_user">
                 <input type="number" name="idade_user" id="idade_user">
                 <input type="number" name="peso_user" id="peso_user">
                 <input type="number" name="altura_user" id="altura_user">
                 <input type="submit" value="enviar">
+            </form>
             </div>
             <p></p>
             Contatos: 
