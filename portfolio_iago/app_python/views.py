@@ -1,14 +1,25 @@
 
 from django.shortcuts import render
 from django.shortcuts import redirect
-import requests
 
-# conexoes com diretorios
+
 def portfolio(request):
     return render(request,'home/index.html')
+    """ Conexão com diretório
 
-# transacao de diretorios
+    Returns:
+        _render_: _renderiza a página principal no localhost_
+    """
+
 def help_python(request):
+    """ Transição de diretórios
+
+    Args:
+        request (_conexão_): _requisição_
+
+    Returns:
+        _render_: _renderizar as páginas que for informado_
+    """
     tratativa_dados = request.POST.get('texto_codigo') 
     if tratativa_dados == '.help':
         return render(request, 'python/help_python.html')

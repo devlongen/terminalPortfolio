@@ -12,34 +12,32 @@
 <body>
     <header>
         <div class="cabecalho">
-            <h1 id="portfolio"></h1>
+            <h1 id="portfolio"></h1> <!-- Título principal, será preenchido dinamicamente (Javascript) -->
         </div>
     </header>
     
-    <section id="area_conhecimento">
+    <section id="area_help"><!-- Início da seção de área de help -->
         <div class="terminal">
             <h1>Bem-vindo ao Portfólio de Iago Longen</h1>
             <h2>Desenvolvedor Backend</h2>
             <p>Portfolio Version [0.1]</p>
-            <p>(c) IAGO LONGEN Todos os direitos reservados.</p>
-            <p id="texto">C:\Users\Visitante></p>
-            <p id="texto2"></p>
-            <p id="texto3"></p>
+            <p>(c) IAGO LONGEN Todos os direitos reservados.</p> <!-- Aviso de direitos autorais -->
+            <p id="texto">C:\Users\Visitante></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
+            <p id="texto2"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
+            <p id="texto3"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
             <div>
                 <form action="{% url 'help_python' %}" method="post" id="texto_cmd">
-                {% csrf_token %}
-                <span>C:\Users\Visitante></span>
-                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input">
-                <span class="cursor"></span>
+                {% csrf_token %} <!-- Token CSRF para proteção do formulário -->
+                <span>C:\Users\Visitante></span> <!-- Texto estático -->
+                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input"> <!-- Prompt do terminal -->
+                <span class="cursor"></span> <!-- Entrada de texto para comandos -->
                 </form>
             </div>
             <p></p>
             Contatos: 
             <img src="https://cdn-icons-png.flaticon.com/256/174/174879.png" alt="" class="image_wpp">(47) 9 8807-1571
         </div>
-        <script src="{% static 'js/script.js' %}"></script>
-    </section>
-    <footer>
-    </footer>
+        <script src="{% static 'js/script.js' %}"></script> <!-- Script JavaScript principal -->
+    </section> <!-- Fim da seção de área de help -->
 </body>
 </html>
