@@ -18,5 +18,4 @@ def calculo_imc(pesoUsuario,alturaUsuario):
 }
 
 	response = requests.get(url, headers=headers, params=querystring)
-
-
+	return response
