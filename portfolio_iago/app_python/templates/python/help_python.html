@@ -22,11 +22,10 @@
             <p>Portfolio Version [0.1]</p>
             <p>(c) IAGO LONGEN Todos os direitos reservados.</p>
             <p>A lista de comando que pode ser usados:</p>
-            <p>.cd (ter acesso aos projetos desenvolvidos por mim);]</p>
-            <p>exemplos: jogo_da_velha,jogo_de_advinhar,calculadora_imc</p>
-            <p>.wpp (encaminhar uma mensagem via whatsapp);</p>
-            <p>.linkedin (redirecionado para meu linkedin);</p>
-            <p>.voltar (voltar para pagina principal);</p>
+            <p id="texto_python"></p>
+            <p id="texto_wpp"></p>
+            <p id="texto_linkedin"></p>
+            <p id="texto_voltar"></p>
             <form action="{% url 'portfolio_home' %}" method="post" id="texto_cmd">
                 {% csrf_token %}
                 <span>C:\Users\Visitante></span>
@@ -37,6 +36,7 @@
             <img src="https://cdn-icons-png.flaticon.com/256/174/174879.png" alt="" class="image_wpp">(47) 9 8807-1571
         </div>
         <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/help_script.js' %}"></script>
     </section>
     
 </body>
