@@ -95,16 +95,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-document.addEventListener('DOMContentLoaded'), function() {
-    var form = document.querySelector('form');
-
-    form.addEventListener('submit'), function(event) {
-        event.preventDefault();
-
-        // Captura os valores dos campos de entrada
-        var nomeUsuario = document.getElementById('name_user').value;
-        var idadeUsuario = document.getElementById('idade_user').value;
-        var pesoUsuario = document.getElementById('peso_user').value;
-        var alturaUsuario = document.getElementById('altura_user').value;
-    }
-}
