@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const texto = "Olá! Meu nome é Iago Longen e sou um desenvolvedor backend curioso demais na área da programação. Tenho conhecimentos em várias tecnologias, incluindo Python, Node-RED, MySQL, Javascript e C#. Estou constantemente buscando aprendizado contínuo para aprimorar minhas habilidades e oferecer as melhores soluções para os desafios dos meus projetos. Se você está procurando um profissional comprometido, criativo e dedicado para o seu próximo projeto, fique à vontade para entrar em contato comigo. Explore meu portfólio para ver alguns dos projetos que desenvolvi e entre em contato se tiver alguma dúvida ou oportunidade de colaboração. Estou ansioso para trabalhar juntos!";
+    const texto = " - Sou um jovem de 19 anos, nascido em Joinville (SC), conheço a tecnologia/internet desde meus 7 anos de idade, onde literalmente envelheci com a evolução da internet, em 2022 comecei o meu curso como técnico em desenvolvimento de sistema consegui concluir essa etapa com formação na área e agora busco realizar a minha faculdade de engenharia de software além disso, me pós-graduar em ciência de dados!";
     const textoElemento = document.getElementById('texto');
 
     function escreverTexto(texto, index, intervalo) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     escreverTexto(texto, 0, 25);
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const texto2 = "Tecnologias: Python, Django , Node-RED, MySQL.";
+    const texto2 = "Tecnologias: Python, Webdev(PHP,JS,HTML,CSS), SQL & Node-red";
     const textoElemento = document.getElementById('texto2');
 
     function escreverTexto(texto, index, intervalo) {

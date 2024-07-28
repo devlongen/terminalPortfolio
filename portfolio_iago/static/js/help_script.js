@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const texto_python = ".cd python_prog (programas desenvolvidos em python);";
-    const textoElemento = document.getElementById('texto_python');
+    const texto_github = ".github (meu github);";
+    const textoElemento = document.getElementById('texto_github');
 
-    function escreverTexto(texto_python, index, intervalo) {
-        if (index < texto_python.length) {
-            textoElemento.innerHTML += texto_python.charAt(index);
+    function escreverTexto(texto_github, index, intervalo) {
+        if (index < texto_github.length) {
+            textoElemento.innerHTML += texto_github.charAt(index);
             index++;
             setTimeout(function () {
-                escreverTexto(texto_python, index, intervalo);
+                escreverTexto(texto_github, index, intervalo);
             }, intervalo);
         }
     }
 
     // Iniciar a animação quando a página for carregada
-    escreverTexto(texto_python, 0, 25);
+    escreverTexto(texto_github, 0, 25);
 });
 document.addEventListener('DOMContentLoaded', function () {
     const texto_wpp = ".wpp (encaminhar uma mensagem via whatsapp);";

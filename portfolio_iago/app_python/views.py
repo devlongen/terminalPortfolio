@@ -23,13 +23,9 @@ def help_python(request):
     tratativa_dados = request.POST.get('texto_codigo') 
     if tratativa_dados == '.help':
         return render(request, 'python/help_python.html')
-    elif tratativa_dados == '.cd python_prog':
-        return redirect('https://github.com/devlongen/python_prog')
+    elif tratativa_dados == '.github':
+        return redirect('https://github.com/devlongen/')
     elif tratativa_dados == '.linkedin':
         return redirect('https://www.linkedin.com/in/iagolongen/')
     elif tratativa_dados == '.wpp':
         return redirect('https://wa.me/5547988071571')
-    elif tratativa_dados == '.github':
-        return redirect('https://github.com/devlongen')
-    else:
-        return render(request,'home/index.html')
