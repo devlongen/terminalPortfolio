@@ -4,7 +4,9 @@ from django.shortcuts import redirect
 
 
 def portfolio(request):
-    return render(request,'home/index.html')
+    input_text = request.POST.get('texto_codigo')
+    if input_text == ".help":
+        return render(request,'python/help_python.html')
     """ Conexão com diretório
 
     Returns:
@@ -20,12 +22,6 @@ def help_python(request):
     Returns:
         _render_: _renderizar as páginas que for informado_
     """
-    tratativa_dados = request.POST.get('texto_codigo') 
-    if tratativa_dados == '.help':
-        return render(request, 'python/help_python.html')
-    elif tratativa_dados == '.github':
-        return redirect('https://github.com/devlongen/')
-    elif tratativa_dados == '.linkedin':
-        return redirect('https://www.linkedin.com/in/iagolongen/')
-    elif tratativa_dados == '.wpp':
-        return redirect('https://wa.me/5547988071571')
+    input_text = request.POST.get('texto_codigo')
+    if input_texto == ".voltar":
+        return render(request,'home/index.html')
