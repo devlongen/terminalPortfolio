@@ -4,16 +4,17 @@ from django.shortcuts import redirect
 
 
 def portfolio(request):
-    return render(request,"home/index.html")
-    input_text = request.POST.get('texto_codigo')
-    if input_text == ".help":
-        return redirect("python/help_python.html")
     """ Conexão com diretório
 
     Returns:
         _render_: _renderiza a página principal no localhost_
     """
-
+    try:
+        input_text = request.POST.get('texto_codigo')
+        if input_text == ".help":
+            return redirect("python/help_python.html")
+    except:
+        return render(request,"home/index.html")
 def help_python(request):
     """ Transição de diretórios
 
