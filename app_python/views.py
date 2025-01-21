@@ -2,7 +2,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 
-
 def portfolio(request):
     """ Conexão com diretório
 
@@ -12,9 +11,11 @@ def portfolio(request):
     try:
         input_text = request.POST.get('texto_codigo')
         if input_text == ".help":
-            return redirect("python/help_python.html")
-    except:
-        return render(request,"home/index.html")
+            return redirect('help_python')
+    except Exception as e:
+        print(f"Erro ao processar a requisição: {e}")
+        return render(request, "home/index.html")
+
 def help_python(request):
     """ Transição de diretórios
 
