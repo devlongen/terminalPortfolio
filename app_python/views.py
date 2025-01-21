@@ -7,6 +7,7 @@ def portfolio(request):
 
     Returns:
         _render_: _renderiza a página principal no localhost_
+        
     """
     try:
         input_text = request.POST.get('texto_codigo')
@@ -14,7 +15,9 @@ def portfolio(request):
             return redirect('help_python')
     except Exception as e:
         print(f"Erro ao processar a requisição: {e}")
-        return render(request, "home/index.html")
+    return render(request, "index.html")
+    
+       
 
 def help_python(request):
     """ Transição de diretórios
@@ -25,4 +28,4 @@ def help_python(request):
     Returns:
         _render_: _renderizar as páginas que for informado_
     """
-    return render(request,"python/help_python.html")
+    return render(request,"help_python.html")
