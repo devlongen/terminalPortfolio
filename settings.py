@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'portfolio_iago.urls'
+ROOT_URLCONF = 'urls.py'
 
 TEMPLATES = [
     {
