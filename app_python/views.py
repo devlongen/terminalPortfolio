@@ -17,6 +17,7 @@ def portfolio(request):
         print(f"Erro ao processar a requisição: {e}")
     return render(request, "index.html")
     
+    
        
 
 def help_python(request):
@@ -28,4 +29,19 @@ def help_python(request):
     Returns:
         _render_: _renderizar as páginas que for informado_
     """
-    return render(request,"help_python.html")
+    try:
+        input_text = request.POST.get('texto_codigo')
+        
+        if input_text == ".voltar":
+            return redirect('home')
+        elif input_text == ".github":
+            return redirect('https://github.com/devlongen')
+        elif input_text == ".linkedin":
+            return redirect('https://www.linkedin.com/in/iagolongen/')
+        else:
+            print("Digitou algo errado tente novamente")    
+        return render(request,"help_python.html")
+    except Exception as e:
+        print(f"Erro ao processar a requisição: {e}")
+
+   
