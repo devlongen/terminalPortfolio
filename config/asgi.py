@@ -1,5 +1,5 @@
 """
-ASGI config for portfolio_iago project.
+ASGI config for app_python project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
