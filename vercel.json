@@ -2,8 +2,8 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "manage.py"
+      "src": "manage.py",
+      "dest": ""
     }
   ]
 }
