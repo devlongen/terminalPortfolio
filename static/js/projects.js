@@ -1,33 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const text_project = "Esses projetos foram realizados por mim, onde eu tenho grande satisfação em apresentar-los.";
-    const textoElemento = document.getElementById('text_project');
+    const texts = [
+        { text: "Esses projetos foram realizados por mim, onde eu tenho grande satisfação em apresentar-los.", elementId: 'text_project', interval: 25 },
+        { text: ".removeBG, removedor de fundo via Python.", elementId: 'text_removeBG', interval: 35 },
+        { text: ".bot_report, bot que extraia dados e mandava automaticamente para googledrive.", elementId: 'text_botReport', interval: 35 },
+        { text: ".estoqueSystem, sistema de estoque.", elementId: 'text_estoque', interval: 35 },
+        { text: ".startup_connect, sistema para uma empresa de gerenciamento de startups.", elementId: 'text_startupConnect', interval: 35 },
+    ];
 
-    function escreverTexto(text_project, index, intervalo) {
-        if (index < text_project.length) {
-            textoElemento.innerHTML += text_project.charAt(index);
-            index++;
-            setTimeout(function () {
-                escreverTexto(text_project, index, intervalo);
-            }, intervalo);
+    function escreverTexto(text, elementId, interval) {
+        return new Promise((resolve) => {
+            const textoElemento = document.getElementById(elementId);
+            let index = 0;
+
+            function escrever() {
+                if (index < text.length) {
+                    textoElemento.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(escrever, interval);
+                } else {
+                    resolve();
+                }
+            }
+            escrever();
+        });
+    }
+
+    async function executarAnimacoes() {
+        for (const { text, elementId, interval } of texts) {
+            await escreverTexto(text, elementId, interval);
         }
     }
 
-    escreverTexto(text_project, 0, 25);
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const text_removeBG = ".removeBG, Removedor de fundo via Python";
-    const textoElemento = document.getElementById('text_removeBG');
-
-    function escreverTexto(text_removeBG, index, intervalo) {
-        if (index < text_removeBG.length) {
-            textoElemento.innerHTML += text_removeBG.charAt(index);
-            index++;
-            setTimeout(function () {
-                escreverTexto(text_removeBG, index, intervalo);
-            }, intervalo);
-        }
-    }
-
-    // Iniciar a animação quando a página for carregada
-    escreverTexto(text_removeBG, 0, 25);
+    executarAnimacoes();
 });

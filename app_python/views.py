@@ -15,6 +15,10 @@ def portfolio(request):
             return render(request,"help_python.html")
         elif input_text==".projects":
             return render(request,"projects.html")
+        elif input_text==".linkedin":
+            return redirect('https://www.linkedin.com/in/iagolongen/')
+        else:
+            print("ERRO PRO SERVIDOR")
     except Exception as e:
         print(f"ERRO RENDERIZAR PAGE {e}")
     return render(request, "index.html")

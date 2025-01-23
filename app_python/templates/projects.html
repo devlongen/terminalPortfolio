@@ -26,6 +26,10 @@
                 <form action="{% url 'projects' %}" method="post" id="texto_cmd">
                 {% csrf_token %} <!-- Token CSRF para proteção do formulário -->
                 <p id="text_removeBG"></p>
+                <p id="text_botReport"></p>
+                <p id="text_estoque"></p>
+                <p id="text_startupConnect"></p>
+                <p id="error_message"></p>
                 <span>C:\Users\Visitante></span> <!-- Texto estático -->
                 <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input"> <!-- Prompt do terminal -->
                 <span class="cursor"></span> <!-- Entrada de texto para comandos -->

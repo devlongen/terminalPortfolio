@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const portfolio = "PORTFÓLIO DE IAGO";
     const textoElemento = document.getElementById('portfolio');
-    function escreverTexto(texto, index, intervalo) {
+    function escreverTexto(portfolio, index, intervalo) {
         if (index < portfolio.length) {
             textoElemento.innerHTML += portfolio.charAt(index);
             index++;
@@ -89,18 +89,27 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('texto_cmd');
     const codigo_input = document.getElementById('codigo_input');
+    const error_message = document.getElementById('error_message'); // Adicione um elemento para exibir erros.
 
     codigo_input.focus();
 
+    const comandosPermitidos = [".help", ".projects", ".linkedin", ".voltar", ".removeBG", ".bot_report", ".estoqueSystem", ".startup_connect"]; // Adicione aqui os comandos válidos.
+
     // Adiciona um ouvinte de evento para o evento 'keypress'
     codigo_input.addEventListener('keypress', function (event) {
-        // Verifica se a tecla pressionada foi 'Enter' (código de tecla 13)
-        if (event.key === 13) {
+        // Verifica se a tecla pressionada foi 'Enter'
+        if (event.key === "Enter") {
             // Impede o envio padrão do formulário
             event.preventDefault();
-            // Executa a ação desejada, por exemplo, envia o formulário
-            form.submit();
+            const comando = codigo_input.value.trim();
+
+            // Valida se o comando é permitido
+            if (comandosPermitidos.includes(comando)) {
+                form.submit(); // Envia o formulário se o comando for válido
+            } else {
+                error_message.textContent = `Comando inválido: "${comando}". Tente um dos comandos permitidos: ".help | .voltar | .projects | .linkedin"`; // Exibe erro
+                error_message.style.color = "red"; // Exemplo de estilização
+            }
         }
     });
 });
-

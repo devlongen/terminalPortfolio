@@ -25,6 +25,7 @@
             <p id="texto">C:\Users\Visitante></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
             <p id="texto2"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
             <p id="texto3"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
+            <p id="error_message"></p>
             <div>
                 <form action="{% url 'portfolio' %}" method="post" id="texto_cmd">
                 {% csrf_token %} <!-- Token CSRF para proteção do formulário -->

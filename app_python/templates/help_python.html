@@ -25,6 +25,7 @@
             <p id="text_projects"></p><!-- (Javascript) Espaço para texto relacionado ao Python -->
             <p id="texto_linkedin"></p><!-- (Javascript) Espaço para texto relacionado ao Linkedin -->
             <p id="texto_voltar"></p><!-- (Javascript) Espaço para texto relacionado ao Voltar -->
+            <p id="error_message"></p>
             <form action="{% url 'help_python' %}" method="post" id="texto_cmd">
                 {% csrf_token %}
                 <span>C:\Users\Visitante></span><!-- Token CSRF para segurança -->
