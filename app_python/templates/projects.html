@@ -18,16 +18,14 @@
     
     <section id="area_help"><!-- Início da seção de área de help -->
         <div class="terminal">
-            <h1>Bem-vindo ao Portfólio de Iago Longen</h1>
-            <h2>Software Developer/Support Analyst</h2>
+            <h1>Projetos realizados por mim</h1>
             <p>Portfolio Version [1.3]</p>
             <p>(c) IAGO LONGEN MENDONÇA Todos os direitos reservados.</p> <!-- Aviso de direitos autorais -->
-            <p id="texto">C:\Users\Visitante></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
-            <p id="texto2"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
-            <p id="texto3"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
+            <p id="text_project">C:\Users\Visitante> </p> <!-- Texto será preenchido dinamicamente (Javascript) -->
             <div>
-                <form action="{% url 'portfolio' %}" method="post" id="texto_cmd">
+                <form action="{% url 'projects' %}" method="post" id="texto_cmd">
                 {% csrf_token %} <!-- Token CSRF para proteção do formulário -->
+                <p id="text_removeBG"></p>
                 <span>C:\Users\Visitante></span> <!-- Texto estático -->
                 <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input"> <!-- Prompt do terminal -->
                 <span class="cursor"></span> <!-- Entrada de texto para comandos -->
@@ -37,7 +35,9 @@
             Contatos: 
             <img src="https://cdn-icons-png.flaticon.com/256/174/174879.png" alt="" class="image_wpp">(47) 9 8807-1571
         </div>
+        <script src="{% static 'js/projects.js' %}"></script> 
         <script src="{% static 'js/script.js' %}"></script> <!-- Script JavaScript principal -->
+      
     </section> <!-- Fim da seção de área de help -->
 </body>
 </html>

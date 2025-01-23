@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const texto_github = ".github (meu github);";
-    const textoElemento = document.getElementById('texto_github');
+    const texto_github = ".projects (projetos realizados);";
+    const textoElemento = document.getElementById('text_projects');
 
     function escreverTexto(texto_github, index, intervalo) {
         if (index < texto_github.length) {
