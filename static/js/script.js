@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     codigo_input.focus();
 
-    const comandosPermitidos = [".help", ".projects", ".linkedin", ".voltar", ".removeBG", ".bot_report", ".estoqueSystem", ".startup_connect"]; // Adicione aqui os comandos válidos.
+    const comandosPermitidos = [".help", ".projects", ".linkedin", ".voltar", ".removeBG", ".bot_report", ".estoqueSystem", ".startup_connect",".pokemon-api"]; // Adicione aqui os comandos válidos.
 
     // Adiciona um ouvinte de evento para o evento 'keypress'
     codigo_input.addEventListener('keypress', function (event) {
@@ -131,5 +131,8 @@ function newTab() {
     }
     else if(isCheckText==".startupconnect"){
         window.open("https://github.com/devlongen/startup_connect")
+    }
+    else if(isCheckText==".pokemon-api"){
+        window.open("https://vinciushofs.github.io/pokemon-api/index.html")
     }
 }
