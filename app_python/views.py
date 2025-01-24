@@ -44,6 +44,8 @@ def isDirectProjectsPage(request):
         input_text = request.POST.get('texto_codigo')
         if input_text==".voltar":
             return redirect('portfolio')
+        elif input_text==".help":
+            return redirect('help_python')
     except Exception as e:    
         print(f"Erro de requisição {e}")
     return render(request,"projects.html")
