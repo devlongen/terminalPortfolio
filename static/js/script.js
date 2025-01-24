@@ -110,6 +110,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 error_message.textContent = `Comando inválido: "${comando}". Tente um dos comandos permitidos: ".help | .voltar | .projects | .linkedin"`; // Exibe erro
                 error_message.style.color = "red"; // Exemplo de estilização
             }
+        newTab()
         }
     });
 });
+function newTab() {
+    isCheckText = document.getElementById('codigo_input').value;
+    console.log(isCheckText)
+    if (isCheckText==".linkedin"){
+        window.open("https://www.linkedin.com/in/iagolongen/", "_blank");
+    }
+    else if(isCheckText==".removeBG"){
+        window.open("https://github.com/devlongen/package_Remove")
+    }
+    else if(isCheckText==".bot_report"){
+        window.open("https://github.com/devlongen/bot_report")
+    }
+    else if(isCheckText==".estoqueSystem"){
+        window.open("https://github.com/devlongen/Estoque")
+    }
+    else if(isCheckText==".startupconnect"){
+        window.open("https://github.com/devlongen/startup_connect")
+    }
+}

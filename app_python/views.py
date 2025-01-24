@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from django.shortcuts import redirect
+import webbrowser
 
 def portfolio(request):
     """ Conexão com diretório
@@ -15,10 +16,8 @@ def portfolio(request):
             return render(request,"help_python.html")
         elif input_text==".projects":
             return render(request,"projects.html")
-        elif input_text==".linkedin":
-            return redirect('https://www.linkedin.com/in/iagolongen/')
         else:
-            print("ERRO PRO SERVIDOR")
+            print("REDIRECIONADO PRA URL FORA")
     except Exception as e:
         print(f"ERRO RENDERIZAR PAGE {e}")
     return render(request, "index.html")
@@ -32,6 +31,8 @@ def isDirectHelpPage(request):
         
         if input_text == ".voltar":
             return redirect('portfolio')
+        elif input_text ==".projects":
+            return redirect('projects')
         else:
             print("Digitou algo errado tente novamente")    
     except Exception as e:
@@ -39,18 +40,9 @@ def isDirectHelpPage(request):
     return render(request,"help_python.html")
 
 def isDirectProjectsPage(request):
-    
     try:
         input_text = request.POST.get('texto_codigo')
-        if input_text==".removeBG":
-            return redirect('https://github.com/devlongen/package_Remove')
-        elif input_text==".bot_report":
-            return redirect('https://github.com/devlongen/bot_report')
-        elif input_text==".estoqueSystem":
-            return redirect('https://github.com/devlongen/startup_connect')
-        elif input_text==".startup_connect":
-            return redirect('https://github.com/devlongen/startup_connect')
-        elif input_text==".voltar":
+        if input_text==".voltar":
             return redirect('portfolio')
     except Exception as e:    
         print(f"Erro de requisição {e}")

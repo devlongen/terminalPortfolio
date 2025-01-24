@@ -20,7 +20,7 @@
         <div class="terminal">
             <h1>Bem-vindo ao Portfólio de Iago Longen</h1>
             <h2>Software Developer/Support Analyst</h2>
-            <p>Portfolio Version [1.3]</p>
+            <p>Portfolio Version [1.5]</p>
             <p>(c) IAGO LONGEN MENDONÇA Todos os direitos reservados.</p> <!-- Aviso de direitos autorais -->
             <p id="texto">C:\Users\Visitante></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
             <p id="texto2"></p> <!-- Texto será preenchido dinamicamente (Javascript) -->
@@ -30,7 +30,7 @@
                 <form action="{% url 'portfolio' %}" method="post" id="texto_cmd">
                 {% csrf_token %} <!-- Token CSRF para proteção do formulário -->
                 <span>C:\Users\Visitante></span> <!-- Texto estático -->
-                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input"> <!-- Prompt do terminal -->
+                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input" onclick="newTab()"> <!-- Prompt do terminal -->
                 <span class="cursor"></span> <!-- Entrada de texto para comandos -->
                 </form>
             </div>

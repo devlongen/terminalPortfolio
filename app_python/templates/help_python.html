@@ -19,7 +19,7 @@
         <div class="terminal">
             <h1>Bem-vindo ao Portfólio de Iago Longen</h1>
             <h2>Desenvolvedor Backend</h2>
-            <p>Portfolio Version [1.3]</p>
+            <p>Portfolio Version [1.5]</p>
             <p>(c) IAGO LONGEN Todos os direitos reservados.</p>
             <p>A lista de comando que pode ser usados:</p>
             <p id="text_projects"></p><!-- (Javascript) Espaço para texto relacionado ao Python -->
@@ -29,7 +29,7 @@
             <form action="{% url 'help_python' %}" method="post" id="texto_cmd">
                 {% csrf_token %}
                 <span>C:\Users\Visitante></span><!-- Token CSRF para segurança -->
-                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input"> <!-- Prompt do terminal -->
+                <input type="text" name="texto_codigo" id="codigo_input" class="codigo_input" onclick="newTab()"> <!-- Prompt do terminal -->
                 <span class="cursor"></span> <!-- Entrada de texto para comandos -->
             <p></p>
             Contatos: 
